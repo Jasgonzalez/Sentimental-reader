@@ -26,11 +26,12 @@ def analyze2():
     user_input = float(request.form['user_input'])
 
     if user_input % 2 == 0:
-        return "True"
+        result = "True"
     
     else:
-        return "false"
+        result =  "false"
 
+    return render_template('home.html', result = result)
 
 
 if __name__ == '__main__':

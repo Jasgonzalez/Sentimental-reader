@@ -1,3 +1,184 @@
-h1{
-    color: gray;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Milkyway';
+}
+
+@font-face {
+    font-family: 'Milkyway';
+    src: url("{{ url_for('assets', filename='/fonts/milkyway-demo/Milkyway DEMO.ttf') }}") format('truetype');
+
+    src: url('/assets/fonts/milkyway-demo/Milkyway DEMO.ttf') format('truetype');
+}
+
+/* Navbar */
+.navbar {
+    background-color: #B5E2FA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+nav {
+    padding: 2.5rem;
+
+}
+
+.navbar h1 {
+    font-size: 2.5rem;
+    color: #F7A072;
+    font-weight: 20;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0078D4;
+}
+
+.companyname{
+    background-color: rgb(255, 225, 225);
+    padding: 1rem;
+    border-radius: 3rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+/* Container2 */
+.container2 {
+    width: 100%;
+    height: 87vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F9F7F3;
+    padding: 0 2rem; /* Add padding for responsiveness */
+}
+
+/* Form */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%; /* Make the form take up 100% width */
+    max-width: 50rem; /* Limit maximum width for larger screens */
+}
+
+label {
+    font-size: 2rem; /* Responsive font size */
+    text-align: center;
+    margin-bottom: 1rem; /* Space between label and textarea */
+}
+
+/* Textarea */
+.textarea-wrapper {
+    width: 100%; /* Make textarea wrapper responsive */
+}
+
+textarea {
+    width: 100%; /* Full width, but within the wrapper */
+    height: 15rem;
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    resize: none;
+    border-width: 0.5rem;
+    border-color: #B5E2FA;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+/* Button */
+button {
+    display: flex;
+    flex-direction: row;
+    background-color: #EDDEA4;
+    color: black;
+    font-weight: 1;
+    border: solid;
+    border-color: black;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+button:hover {
+    background-color: #F7A072;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar h1 {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .container2 {
+        padding: 2rem 1rem; /* Less padding on smaller screens */
+    }
+
+    form {
+        gap: 1.5rem;
+    }
+
+    label {
+        font-size: 1.3rem;
+    }
+
+    textarea {
+        width: 100%;
+        height: 10rem; /* Adjust height for smaller screens */
+    }
+
+    button {
+        padding: 15px; /* Smaller button padding for small screens */
+        font-size: 0.8rem; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 1rem; /* Further reduce font size on very small screens */
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    label {
+        font-size: 1.6rem;
+    }
+
+    textarea {
+        width: 100%;
+        height: 10rem; /* Further reduce height */
+        font-size: 1.2rem; /* Adjust font size for smaller text area */
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1rem; /* Smaller font size for button */
+    }
 }

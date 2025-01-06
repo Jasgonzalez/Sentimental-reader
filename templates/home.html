@@ -4,23 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="/static/index.css">
+    <script src="/static/Index.js"></script>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='Index.css') }}">
 </head>
 <body>
-    <h1>Hello Princess</h1>
-</body>
-</html>
+
 
 <!-- Create navbar -->
+<header class="container">
+    <div class="navbar">
+        <h1 class="companyname"> 🌤️FLUFFY🌨️FEELINGS⛈️</h1>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-<!-- Create the rest of the page (input box, output box etc) -->
+<!-- Main Content -->
+<main class="container2">
+    <div class="form">
+        <form action="/analyze" method="post">
+            <label for="user_input">Type your message below to uncover its true sentiment!</label>
+            <div class="textarea-wrapper">
+                <textarea id="user_input" placeholder="Are you sure you wanna know the truth...?☁️"></textarea>
+              </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</main>
 
-<form action="/analyze" method="POST">
-    <label for="">Enter Something you want to get analyzed</label>
-    <input type="text" name="user_input" id="user_input">
-    <input type="submit" value="submit">
-</form>
-
-<button><a href="/login">login page</a></button>
+<!--{%if result is not none%}
+<p>Result: {{result}}</p>
+{%endif%}
 
 <!-- Create footer -->
+</body>
+</html>
