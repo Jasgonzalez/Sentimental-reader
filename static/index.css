@@ -7,8 +7,6 @@
 
 @font-face {
     font-family: 'Milkyway';
-    src: url("{{ url_for('assets', filename='/fonts/milkyway-demo/Milkyway DEMO.ttf') }}") format('truetype');
-
     src: url('/assets/fonts/milkyway-demo/Milkyway DEMO.ttf') format('truetype');
 }
 

@@ -6,7 +6,6 @@
     <title>Home</title>
     <link rel="stylesheet" href="/static/index.css">
     <script src="/static/Index.js"></script>
-
     <link rel="stylesheet" href="{{ url_for('static', filename='Index.css') }}">
 </head>
 <body>
@@ -38,8 +37,8 @@
     </div>
 </main>
 
-<!--{%if result is not none%}
-<p>Result: {{result}}</p>
+{%if result is not none%}
+<p>These are the results: {{analysis}}</p>
 {%endif%}
 
 <!-- Create footer -->
