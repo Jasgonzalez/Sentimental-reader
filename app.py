@@ -22,6 +22,7 @@ def login():
 def analyze(): 
 
     user_input = request.form.get('user_input', '')  # Safely get user input
+    print(user_input)
     if not user_input.strip():
         return render_template('home.html', analysis="Please provide valid input text.")
     
@@ -33,7 +34,7 @@ def analyze():
 
 
     
-
+'''
 @app.route("/analyze2", methods=['POST'])
 def analyze2():
     user_input = float(request.form['user_input'])
@@ -45,7 +46,7 @@ def analyze2():
         result =  "false"
 
     return render_template('home.html', result = result)
-
+'''
 
 if __name__ == '__main__':
     app.run(debug=True)
