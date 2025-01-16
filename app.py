@@ -22,7 +22,6 @@ def login():
 def analyze(): 
 
     user_input = request.form.get('user_input', '')  # Safely get user input
-    print(user_input)
     if not user_input.strip():
         return render_template('home.html', analysis="Please provide valid input text.")
     
