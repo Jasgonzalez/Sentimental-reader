@@ -1,5 +1,6 @@
 from flask import Flask, render_template,request
 from transformers import pipeline
+import torch
 
 
 app = Flask(__name__)
