@@ -5,6 +5,7 @@ import torch
 
 app = Flask(__name__)
 
+device = 0 if torch.cuda.is_available() else -1  # Use GPU if available
 classifier = pipeline("text-classification",model='bhadresh-savani/distilbert-base-uncased-emotion', return_all_scores=True)
 
 
@@ -18,7 +19,7 @@ def login():
 
 
 @app.route("/analyze", methods=['POST'])
-def analyze():
+def analyze(): 
 
     user_input = request.form.get('user_input', '')  # Safely get user input
     if not user_input.strip():
