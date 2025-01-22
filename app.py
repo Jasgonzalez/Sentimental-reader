@@ -26,8 +26,17 @@ def analyze():
         return render_template('home.html', analysis="Please provide valid input text.")
     
     try:
+
+        # perform the classification
         analysis = classifier(user_input)
-        return render_template('home.html', analysis=analysis)
+        
+        # find the highest rated classification
+        highest_emotion = max(analysis[0], key = lambda x: x ['score'])
+        
+        # Prepare the result message
+        result_message = f"Emotion: {highest_emotion['label']}"
+
+        return render_template('home.html', analysis=result_message)
     except Exception as e:
         return render_template('home.html', analysis=f"Error during analysis: {str(e)}")
 
