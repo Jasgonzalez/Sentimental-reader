@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'Milkyway';
-    src: url('/assets/fonts/milkyway-demo/Milkyway DEMO.ttf') format('truetype');
+    src: url('/static/assets/fonts/milkyway-demo/Milkyway\ DEMO.ttf') format('truetype');
 }
 
 /* Navbar */
